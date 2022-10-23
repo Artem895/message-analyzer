@@ -93,5 +93,12 @@
     <properties>
         <mybatis.version>3.5.5</mybatis.version>
     </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

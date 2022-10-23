@@ -12,25 +12,26 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    private static final String HOST="localhost";
-    public static final String QUEUE_NAME="common_monitoring";
+    public static final String QUEUE_NAME = "common_monitoring";
+    private static final String HOST = "localhost";
 
     @Bean
     public ConnectionFactory connectionFactory() {
         return new CachingConnectionFactory(HOST);
     }
+
     @Bean
-    public AmqpAdmin ampqAdmin(){
+    public AmqpAdmin ampqAdmin() {
         return new RabbitAdmin(connectionFactory());
     }
 
     @Bean
-    public RabbitTemplate rabbitTamplate(){
+    public RabbitTemplate rabbitTamplate() {
         return new RabbitTemplate(connectionFactory());
     }
 
     @Bean
-    public Queue myQueue(){
+    public Queue myQueue() {
         return new Queue(QUEUE_NAME);
     }
 }

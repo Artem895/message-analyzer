@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"liga.medical.message"})
+@ComponentScan("liga.medical.message")
 public class MessageAnalyzerApp {
     public static void main(String[] args) {
         SpringApplication.run(MessageAnalyzerApp.class, args);

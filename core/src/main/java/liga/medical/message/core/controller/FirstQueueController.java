@@ -18,8 +18,9 @@ public class FirstQueueController {
     public FirstQueueController(RabbitSenderService rabbitSenderService) {
         this.rabbitSenderService = rabbitSenderService;
     }
+
     @PostMapping("/send")
-    public ResponseEntity<String> rabbitcontroler(@RequestBody String message){
+    public ResponseEntity<String> rabbitcontroler(@RequestBody String message) {
         return rabbitSenderService.sendMessage(message);
     }
 }

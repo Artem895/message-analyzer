@@ -7,17 +7,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RabbitSenderService  {
+public class RabbitSenderService {
 
     private final AmqpTemplate amqpTemplate;
 
     @Autowired
-    public RabbitSenderService( AmqpTemplate amqpTemplate) {
+    public RabbitSenderService(AmqpTemplate amqpTemplate) {
         this.amqpTemplate = amqpTemplate;
     }
 
     public ResponseEntity<String> sendMessage(String message) {
-        amqpTemplate.convertAndSend(RabbitConfig.QUEUE_NAME,message);
+        amqpTemplate.convertAndSend(RabbitConfig.QUEUE_NAME, message);
         return ResponseEntity.ok("Сообщение доставлено в очередь coomone_monitoring");
 
     }
