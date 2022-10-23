@@ -6,9 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("liga.medical.message")
-public class MessageAnalyzerApp {
-    public static void main(String[] args) {
-        SpringApplication.run(MessageAnalyzerApp.class, args);
+public class MessageAnalyzerServiceApp {
+    public static void main(String... args) {
+        SpringApplication.run(MessageAnalyzerServiceApp.class, args);
     }
 
 }
